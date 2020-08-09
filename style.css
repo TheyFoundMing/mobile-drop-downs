@@ -72,4 +72,38 @@ body {
     margin-bottom: 1.5em;
     font-size: 1.2em;
   }
+
+  .line {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .line hr {
+    top: 5px;
+    margin: 0px;
+    visibility: hidden;
+  }
+
+  .current hr {
+    visibility: initial;
+    top: 5px;
+    /* height: 2px; */
+    /* width: 100%; */
+    animation-name: current;
+    /* animation-iteration-count: infinite; */
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes current {
+    from {
+      width: 20%;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
 }
